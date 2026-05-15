@@ -3,50 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactez-nous - [Nom du Site Touristique]</title>
+    <title>Contactez-nous | Voyage & Découverte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-        .contact-container { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); max-width: 600px; width: 90%; }
-        h2 { color: #0056b3; text-align: center; margin-bottom: 30px; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: bold; color: #333; }
-        input[type="text"], input[type="email"], textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; transition: border-color 0.3s; }
-        input[type="text"]:focus, input[type="email"]:focus, textarea:focus { border-color: #007bff; outline: none; }
-        textarea { resize: vertical; min-height: 150px; }
-        button { background-color: #007bff; color: white; padding: 14px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; transition: background-color 0.3s; }
-        button:hover { background-color: #0056b3; }
-        .info-section { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666; }
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 2rem; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .contact-container { background: var(--card-bg); padding: 3rem; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); max-width: 500px; width: 100%; }
+        h2 { color: var(--text); margin-bottom: 0.5rem; font-weight: 600; text-align: center; }
+        p.subtitle { text-align: center; color: var(--secondary); margin-bottom: 2rem; font-size: 0.9rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: 400; font-size: 0.9rem; }
+        input[type="text"], input[type="email"], textarea { width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; box-sizing: border-box; font-size: 1rem; transition: all 0.2s; }
+        input:focus, textarea:focus { border-color: var(--primary); outline: none; ring: 2px solid #bfdbfe; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+        textarea { resize: vertical; min-height: 120px; }
+        button { width: 100%; background-color: var(--primary); color: white; padding: 0.8rem; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: background 0.2s; }
+        button:hover { background-color: #1d4ed8; }
+        .info-section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #f1f5f9; text-align: center; font-size: 0.85rem; color: var(--secondary); }
     </style>
 </head>
 <body>
     <div class="contact-container">
-        <h2>🌍 Contactez l'équipe de [Nom du Site Touristique]</h2>
-        <p style="text-align: center; margin-bottom: 25px;">Nous sommes là pour répondre à toutes vos questions concernant votre voyage. N'hésitez pas à nous contacter !</p>
-        
+        <h2>Contactez-nous</h2>
+        <p class="subtitle">Nous répondrons à votre demande dans les plus brefs délais.</p>
         <form action="#" method="POST">
             <div class="form-group">
-                <label for="name">Nom Complet :</label>
-                <input type="text" id="name" name="name" required placeholder="Entrez votre nom...">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="email">Adresse E-mail :</label>
-                <input type="email" id="email" name="email" required placeholder="exemple@mail.com">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="subject">Sujet de votre demande :</label>
-                <input type="text" id="subject" name="subject" required placeholder="Ex: Réservation, Information générale, Soutien">
-            </div>
-            <div class="form-group">
-                <label for="message">Votre Message :</label>
-                <textarea id="message" name="message" required placeholder="Décrivez votre requête en détail..."></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
             </div>
             <button type="submit">Envoyer le message</button>
         </form>
-        
         <div class="info-section">
-            <p>Ou contactez-nous directement :</p>
-            <p>📞 Téléphone : +[Code Pays] [Numéro]</p>
-            <p>📧 E-mail : info@[NomDuSite].com</p>
+            <p>+33 1 23 45 67 89</p>
+            <p>support@voyage-decouverte.com</p>
         </div>
     </div>
 </body>
