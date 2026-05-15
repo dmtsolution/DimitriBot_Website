@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Connexion | Voyage & Découverte</title>
+    <title>Inscription | Voyage & Découverte</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #0f172a; --accent: #f59e0b; }
@@ -16,13 +16,15 @@
 </head>
 <body>
     <div class="container">
-        <h2>Connexion</h2>
+        <h2>Créer un compte</h2>
         <form>
+            <div class="form-group"><input type="text" placeholder="Nom complet" required></div>
             <div class="form-group"><input type="email" placeholder="Email" required></div>
             <div class="form-group"><input type="password" placeholder="Mot de passe" required></div>
-            <button type="submit">Se connecter</button>
+            <div class="form-group"><input type="password" placeholder="Confirmer le mot de passe" required></div>
+            <button type="submit">S'inscrire</button>
         </form>
-        <p style="text-align:center; margin-top:1rem; font-size:0.9rem">Pas de compte ? <a href="inscription.html">Inscription</a></p>
+        <p style="text-align:center; margin-top:1rem; font-size:0.9rem">Déjà un compte ? <a href="connexion.html">Connexion</a></p>
     </div>
 </body>
 </html>
