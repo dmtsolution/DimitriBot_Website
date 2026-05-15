@@ -9,6 +9,12 @@
         :root { --primary: #2563eb; --secondary: #64748b; --bg: #f8fafc; --card-bg: #ffffff; --text: #1e293b; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 2rem; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
         .contact-container { background: var(--card-bg); padding: 3rem; border-radius: 12px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); max-width: 500px; width: 100%; }
+        
+        /* Progress Bar */
+        .progress-bar { display: flex; justify-content: space-between; margin-bottom: 2rem; }
+        .progress-step { font-size: 0.8rem; color: #cbd5e1; font-weight: 600; }
+        .progress-step.active { color: var(--primary); }
+
         h2 { color: var(--text); margin-bottom: 0.5rem; font-weight: 600; text-align: center; }
         .step { display: none; }
         .step.active { display: block; }
@@ -22,6 +28,13 @@
 </head>
 <body>
     <div class="contact-container">
+        <!-- Progress Indicator -->
+        <div class="progress-bar">
+            <span class="progress-step active" id="p1">1. Identité</span>
+            <span class="progress-step" id="p2">2. Voyage</span>
+            <span class="progress-step" id="p3">3. Préférences</span>
+        </div>
+
         <form id="multiStepForm">
             <!-- Step 1 -->
             <div class="step active" id="step1">
@@ -62,10 +75,13 @@
     </div>
     <script>
         function nextStep(step) {
+            // Switch forms
             document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
             document.getElementById('step' + step).classList.add('active');
+            // Switch progress
+            document.querySelectorAll('.progress-step').forEach(p => p.classList.remove('active'));
+            document.getElementById('p' + step).classList.add('active');
         }
-        // Load countries logic...
         fetch('https://restcountries.com/v3.1/all')
             .then(res => res.json())
             .then(data => {
